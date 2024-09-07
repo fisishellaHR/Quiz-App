@@ -1,0 +1,40 @@
+/* Modal overlay styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal content styling */
+.modal {
+  position: relative;
+  width: 90vw; /* Lebar modal 90% dari viewport width */
+  max-width: 900px; /* Lebar maksimal 900px */
+  max-height: 80vh; /* Tinggi maksimal 80% dari viewport height */
+  background: white;
+  border-radius: 8px;
+  overflow: auto; /* Mengizinkan konten digulir jika melebihi ukuran modal */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Atur header dan footer modal */
+.modal-header,
+.modal-footer {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Menyembunyikan scroll bar pada modal jika tidak diperlukan */
+.modal-content {
+  max-height: calc(80vh - 80px); /* Menyesuaikan tinggi konten modal */
+  overflow-y: auto;
+}
